@@ -145,6 +145,6 @@ ssh -T git@gitlab-client1
 
 ## 🔗 Other Related Extensions
 
-- [Git Profile-Protocol Switcher](https://marketplace.visualstudio.com/items?itemName=spajs.git-profile-protocol-switcher)
-- [Git Snapshots](https://marketplace.visualstudio.com/items?itemName=spajs.git-snapshots)
-- [Git Pull Agent](https://marketplace.visualstudio.com/items?itemName=spajs.git-pull-agent)
+- Git Profile-Protocol Switcher - [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=spajs.git-profile-protocol-switcher) | [Open VSX](https://open-vsx.org/extension/SPAjs/git-profile-protocol-switcher)
+- Git Snapshots - [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=spajs.git-snapshots) | [Open VSX](https://open-vsx.org/extension/SPAjs/git-snapshots)
+- Git Pull Agent - [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=spajs.git-pull-agent) | [Open VSX](https://open-vsx.org/extension/SPAjs/git-pull-agent)
