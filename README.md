@@ -125,15 +125,25 @@ ssh -T git@gitlab-client1
 
 **Search in Extensions View:**
 1. Open VS Code, VSCodium, Cursor, or Antigravity.
-2. Press `Ctrl+Shift+X`.
-3. Search for **"Git SSH Config Manager"**.
+2. Go to Extensions (Press `Ctrl+Shift+X`).
+3. Search for this extension **"Git SSH Config Manager"**.
 4. Click **Install**.
 
 ## ⚖️ License
 
-MIT
+- MIT
 
-## 🔗 Related Extensions
+## 🏠 Home
+
+- [GitHub](https://github.com/sucom/vsce-git-ssh-config-manager)
+
+## 🔗 Links
+
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=spajs.git-ssh-config-manager)
+- [Open VSX Registry](https://open-vsx.org/extension/SPAjs/git-ssh-config-manager)
+
+
+## 🔗 Other Related Extensions
 
 - [Git Profile-Protocol Switcher](https://marketplace.visualstudio.com/items?itemName=spajs.git-profile-protocol-switcher) - For switching between HTTP(S) and SSH protocols.
 - [Git Snapshots](https://marketplace.visualstudio.com/items?itemName=spajs.git-snapshots) - For Git based snapshots.
