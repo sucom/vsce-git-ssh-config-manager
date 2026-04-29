@@ -1,4 +1,4 @@
-# Git SSH Config Manager
+# Git SSH Config Manager (VS Code Family Extension)
 
 <p align="center">
   <img src="icon.png" alt="Git SSH Config Manager" width="128"/>
