@@ -1,0 +1,61 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SSH Config",
+  "scopeName": "source.ssh-config",
+  "patterns": [
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#host_block"
+    },
+    {
+      "include": "#keyword"
+    },
+    {
+      "include": "#values"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.ssh-config",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "host_block": {
+      "patterns": [
+        {
+          "match": "(?i)^\\s*(Host|Match)\\b",
+          "name": "keyword.control.ssh-config"
+        }
+      ]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "match": "(?i)^\\s*(AddKeysToAgent|AddressFamily|BatchMode|BindAddress|CanonicalDomains|CanonicalizeFallbackLocal|CanonicalizeHostname|CanonicalizeMaxDots|CanonicalizePermittedCNAMEs|CASignatureAlgorithms|CertificateFile|ChallengeResponseAuthentication|CheckHostIP|Ciphers|ClearAllForwardings|Compression|ConnectionAttempts|ConnectTimeout|ControlMaster|ControlPath|ControlPersist|DynamicForward|EscapeChar|ExitOnForwardFailure|FingerprintHash|ForwardAgent|ForwardX11|ForwardX11Timeout|ForwardX11Trusted|GatewayPorts|GlobalKnownHostsFile|GSSAPIAuthentication|GSSAPIKeyExchange|GSSAPIClientIdentity|GSSAPIDelegateCredentials|GSSAPIKexAlgorithms|GSSAPIRenewalForcesKeyex|GSSAPITrustDns|HashKnownHosts|HostbasedAuthentication|HostbasedKeyTypes|HostKeyAlgorithms|HostKeyAlias|HostName|IdentitiesOnly|IdentityAgent|IdentityFile|IgnoreUnknown|IPQoS|KbdInteractiveAuthentication|KbdInteractiveDevices|KexAlgorithms|LocalCommand|LocalForward|LogLevel|MACs|NoHostAuthenticationForLocalhost|NumberOfPasswordPrompts|PasswordAuthentication|PermitLocalCommand|PKCS11Provider|Port|PreferredAuthentications|ProxyCommand|ProxyJump|ProxyUseFdpass|PubkeyAuthentication|PubkeyAcceptedKeyTypes|RekeyLimit|RemoteCommand|RemoteForward|RequestTTY|RevokedHostKeys|SendEnv|ServerAliveCountMax|ServerAliveInterval|SetEnv|StreamLocalBindMask|StreamLocalBindUnlink|StrictHostKeyChecking|TCPKeepAlive|Tunnel|TunnelDevice|UpdateHostKeys|UsePrivilegedPort|User|UserKnownHostsFile|VerifyHostKeyDNS|VisualHostKey|XAuthLocation|Include)\\b",
+          "name": "support.type.ssh-config"
+        }
+      ]
+    },
+    "values": {
+      "patterns": [
+        {
+          "match": "(?i)\\b(yes|no|ask|any|inet|inet6)\\b",
+          "name": "constant.language.ssh-config"
+        },
+        {
+          "match": "\\b\\d+\\b",
+          "name": "constant.numeric.ssh-config"
+        },
+        {
+          "match": "[\"*?]",
+          "name": "keyword.operator.ssh-config"
+        }
+      ]
+    }
+  }
+}

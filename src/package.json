@@ -1,0 +1,128 @@
+{
+  "name": "git-ssh-config-manager",
+  "displayName": "Git SSH Config Manager",
+  "description": "Automate SSH key generation and manage ~/.ssh/config directly from VS Code.",
+  "version": "1.0.1",
+  "publisher": "SPAjs",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sucom/vsce-git-ssh-config-manager.git"
+  },
+  "keywords": [
+    "git",
+    "ssh",
+    "profile",
+    "ssh key generation",
+    "ssh git config manager",
+    "ssh keygen"
+  ],
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "icon": "icon.png",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "git-ssh-config-manager",
+          "title": "SSH Config Manager",
+          "icon": "$(key)"
+        }
+      ]
+    },
+    "views": {
+      "git-ssh-config-manager": [
+        {
+          "id": "git-ssh-config-manager-view",
+          "name": "View",
+          "icon": "icon.png"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "git-ssh-config-manager.createKey",
+        "title": "Create New SSH Key",
+        "icon": "$(add)"
+      },
+      {
+        "command": "git-ssh-config-manager.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "git-ssh-config-manager.openPublicKey",
+        "title": "Open Public Key",
+        "icon": "$(file-code)"
+      },
+      {
+        "command": "git-ssh-config-manager.copyPublicKey",
+        "title": "Copy Public Key",
+        "icon": "$(copy)"
+      },
+      {
+        "command": "git-ssh-config-manager.openConfig",
+        "title": "Open SSH Config",
+        "icon": "$(go-to-file)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "git-ssh-config-manager.createKey",
+          "when": "view == git-ssh-config-manager-view",
+          "group": "navigation"
+        },
+        {
+          "command": "git-ssh-config-manager.refresh",
+          "when": "view == git-ssh-config-manager-view",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "git-ssh-config-manager.openConfig",
+          "when": "view == git-ssh-config-manager-view && viewItem == sshConfigItem",
+          "group": "inline@1"
+        },
+        {
+          "command": "git-ssh-config-manager.openPublicKey",
+          "when": "view == git-ssh-config-manager-view && viewItem == sshConfigItem",
+          "group": "inline@2"
+        },
+        {
+          "command": "git-ssh-config-manager.copyPublicKey",
+          "when": "view == git-ssh-config-manager-view && viewItem == sshConfigItem",
+          "group": "inline@3"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "id": "ssh_config",
+        "aliases": [
+          "SSH Config",
+          "ssh-config"
+        ],
+        "filenames": [
+          "config"
+        ],
+        "filenamePatterns": [
+          "**/.ssh/config",
+          "**/ssh/config"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ssh_config",
+        "scopeName": "source.ssh-config",
+        "path": "./ssh-config.tmLanguage.json"
+      }
+    ]
+  }
+}
